@@ -1,13 +1,15 @@
 package tests.day16_TestNG_POM;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TestOtomasyonPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C01_PageClassIlePozitifLoginTesti {
 
     @Test
-    public void pozitifLoginTesti(){
+    public void pozitifLoginTesti() {
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get("https://www.testotomasyonu.com");
@@ -17,15 +19,23 @@ public class C01_PageClassIlePozitifLoginTesti {
         // POM'de page class'larinda locate ettigimiz webElementlere ulasmak icin
         // PageClass'larindan obje olustururuz
 
-        TestOtomasyonPage testOtomasyonPage=new TestOtomasyonPage();
+        TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();
         testOtomasyonPage.accountLink.click();
 
 
-
         // 3- Kullanici email'i olarak “wise@gmail.com”girin
-        // 4- Kullanici sifresi olarak “12345” girin
-        // 5- Login butonuna basarak login olun
-        // 6- Basarili olarak giris yapilabildigini test edin
+        testOtomasyonPage.emailKutusu.sendKeys("wise@gmail.com");
 
+        // 4- Kullanici sifresi olarak “12345” girin
+        testOtomasyonPage.passwordKutusu.sendKeys("12345");
+
+        // 5- Login butonuna basarak login olun
+        testOtomasyonPage.loginButonu.click();
+
+        // 6- Basarili olarak giris yapilabildigini test edin
+        Assert.assertTrue(testOtomasyonPage.logooutButonu.isDisplayed());
+
+        ReusableMethods.bekle(3);
+        Driver.quitDriver();
     }
 }

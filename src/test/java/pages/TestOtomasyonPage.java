@@ -2,10 +2,16 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
 
 import java.util.List;
 
 public class TestOtomasyonPage {
+
+    public TestOtomasyonPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
 
     /*
         Page class'lari locate yapmak
@@ -18,7 +24,7 @@ public class TestOtomasyonPage {
 
      */
 
-    @FindBy(id="global-search")
+    @FindBy(id = "global-search")
     public WebElement aramaKutusu;
 
     @FindBy(xpath = "(//a[@class='e-cart'])[1]")
@@ -37,7 +43,7 @@ public class TestOtomasyonPage {
     public WebElement logooutButonu;
 
     @FindBy(xpath = "//*[@*='product-box my-2  py-1']")
-    public List<WebElement>bulunanUrunElementleriList;
+    public List<WebElement> bulunanUrunElementleriList;
 
     @FindBy(xpath = "//div[@class=' heading-sm mb-4']")
     public WebElement urunSayfasindaUrunIsimElementi;
