@@ -21,7 +21,7 @@ public class C05_WebUniversityTest {
         //2."Login Portal" a kadar asagi inin
         WebUniversityPage webUniversityPage=new WebUniversityPage();
         JavascriptExecutor jse= (JavascriptExecutor) Driver.getDriver();
-        //jse.executeScript("arguments[0].scrollIntoView(true);",webUniversityPage.loginPortalElementi);
+        jse.executeScript("window.scrollBy(0, 1000");
 
         ReusableMethods.bekle(1);
 

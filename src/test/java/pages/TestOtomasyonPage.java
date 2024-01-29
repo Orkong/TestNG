@@ -48,5 +48,15 @@ public class TestOtomasyonPage {
     @FindBy(xpath = "//div[@class=' heading-sm mb-4']")
     public WebElement urunSayfasindaUrunIsimElementi;
 
+    @FindBy(xpath = "//button[@class='add-to-cart']")
+    public  WebElement addToCartButonu;
+
+    @FindBy(xpath = "(//div[@class='cart-bar'])[2]")
+    public WebElement yourToCart;
+
+    @FindBy(xpath = "//*[@*='product-title text-center']")
+    public WebElement sepettekiUrunIsimElementi;
+
+
 
 }
