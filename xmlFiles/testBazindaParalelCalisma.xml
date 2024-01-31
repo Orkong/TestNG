@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<!-- day17 package'indaki class'lari paralel testing kullanarak
+     2 driver ile calistirin
+
+        eger browser'lar arasinda daha esit bir yuk dagilimi
+        ve birbiriyle ilintili class'larin tek browser tarafindan
+        calistirilmasini istersek
+        browser'larin calistiracagi class ya da package lari test bazinda kendimiz ayirabiliriz
+
+        ornegin bu xml dosyasinda C01 ve C02 'yi bir browser kalanlari 2.browser calistiracak
+        sekilde paylasim yapalim
+
+        verbase consol'da yazdirilan aciklarmarin
+        az veya cok olmasini tercih etmek icin kullnilir
+        1- en az aciklama
+        2- en cok aciklama
+     -->
+
+<suite name="day17 class level paralel calistirma" parallel="classes" thread-count="2" verbose="4">
+
+    <test name="browser1">
+        <classes>
+            <class name="tests.day17_testNG_POM.C01_NegatifLoginTesti"></class>
+            <class name="tests.day17_testNG_POM.C02_UrunSepetiTesti"></class>
+        </classes>
+    </test>
+
+    <test name="browser2">
+        <classes>
+            <class name="tests.day17_testNG_POM.C03_SwitchingWindows"></class>
+            <class name="tests.day17_testNG_POM.C04_DriverClassSinletonPattern"></class>
+            <class name="tests.day17_testNG_POM.C05_Assertions"></class>
+        </classes>
+    </test>
+</suite>
