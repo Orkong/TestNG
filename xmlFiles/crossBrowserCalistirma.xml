@@ -2,6 +2,37 @@
 
 <!-- day20 crossBrowser calisacak testler package'inda ki tum class'lari
     hem chrome hem de edge ile calistirin
+
+    1- xml dosyasinda farkli browser'lar icin farkli test tag'lari olusuturun
+    2- xml dosyasi calismaya basladiktan sonra manul olarak
+       configration.properties dosyasina mudahale edip
+       browser tercihini degistirme sansimiz olmadigindan
+       xml dosyasindan browser tercihini bir paramaetre olarak YOLLAMAK ZORUNDAYIZ
+    3- Bizim yazdigimiz ve bugune kadar kullandigimiz tum @Test method'lari
+       WebDriver objesini Driver class'inda olusturuyordu.
+       Driver class'i da hangi browser'a ait webDriver olusturacagi bilgisini
+       configration.properties dosyasindan aliyordu.
+
+       Bu yapidan dolayi normal testlerimizin croww browser calisma ihtimali yoktur
+       cross browser calistiracagimiz testleri ozel olarak dizayn edecegiz
     -->
 
+<suite name="CrossBrowser testler">
 
+    <test name="chrome ile calisacak testler">
+        <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="tests.day20_CrossBrowserCalisacakTestler"></package>
+        </packages>
+
+    </test>
+
+    <test name="edge ile calisacak testler">
+        <parameter name="browser" value="edge"></parameter>
+        <packages>
+            <package name="tests.day20_CrossBrowserCalisacakTestler"></package>
+        </packages>
+
+    </test>
+
+</suite>

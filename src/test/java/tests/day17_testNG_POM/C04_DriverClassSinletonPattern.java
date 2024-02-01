@@ -1,7 +1,6 @@
 package tests.day17_testNG_POM;
 
 import org.testng.annotations.Test;
-import utilities.Driver;
 
 public class C04_DriverClassSinletonPattern {
 

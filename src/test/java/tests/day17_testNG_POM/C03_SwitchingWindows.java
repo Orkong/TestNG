@@ -1,6 +1,5 @@
 package tests.day17_testNG_POM;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TestOtomasyonPage;
