@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- day20 crossBrowser calisacak testler package'inda ki tum class'lari
+    hem chrome hem de edge ile calistirin
+    -->
+
+

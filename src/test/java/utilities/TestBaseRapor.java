@@ -26,7 +26,7 @@ public abstract class TestBaseRapor {
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
-        extentReports.setSystemInfo("Automation Engineer", "Gulnur");
+        extentReports.setSystemInfo("Automation Engineer", "Orkun");
         extentHtmlReporter.config().setDocumentTitle("TestNG Test");
         extentHtmlReporter.config().setReportName("TestNG Reports");
     }
