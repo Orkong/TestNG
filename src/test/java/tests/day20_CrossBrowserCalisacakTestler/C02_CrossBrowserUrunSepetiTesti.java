@@ -45,5 +45,6 @@ public class C02_CrossBrowserUrunSepetiTesti extends TestBaseCross {
         String sepettekiUrunIsmi = sepettekiUrunIsimElementi.getText();
 
         Assert.assertEquals(sepettekiUrunIsmi.toLowerCase(),sayfadakiUrunIsmi.toLowerCase());
+
     }
 }
